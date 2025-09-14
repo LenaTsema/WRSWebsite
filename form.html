@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Contact WRS</title>
+        <link href="style.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <header>
+            <!--Logo and WRS-->
+            <div>
+                <a href="index.html">
+                    <img src="WRSImages/TrnsprntLogoCircle.png" alt="WRS logo">
+                    <h1>Wilder Residential Services</h1>
+                </a>
+            </div>
+            
+            <!--Links to other pages-->
+            <div>
+                <nav>
+                    <ul>
+                        <li><a href="about.html" target="_blank">About</a></li>
+                        <li><a href="services.html" target="_blank">Services</a></li>
+                        <li><a href="form.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <!--Image background and message-->
+            <section>
+                <img src="WRSImages/bedContactBG.jpg" alt="Book on a bed">
+                <h2>Contact Us <br>
+                Wilder Residential Services</h2>
+                <div>
+                    <h3>Want to learn more about us? Or maybe get started with your appointment? Send us a message to get started!</h3>
+                </div>
+            </section>
+            <hr>
+
+            <!--Contact info section-->
+            <section>
+                <h2>Business Contact Information:</h2>
+                <address>
+                    <p>
+                        Email: <a href="mailto:tiara.wrsllc@gmail.com">tiara.wrsllc@gmail.com</a> <br>
+                        Phone: <a href="tel:803-542-6443">(803) 542-6443</a> <br>
+                        Hours: Monday-Saturday; 8am-5pm
+                    </p>
+                </address>
+            </section>
+            <hr>
+
+            <!--Send us a message section-->
+            <section>
+                <h2>Send Us a Message:</h2>
+                <form>
+                    <!--First row with Name, Phone Number, and Email-->
+                    <div>
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div>
+                        <label for="phone">Phone Number:</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+
+                    <div>
+                        <label for="email">Email Address::</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <!--Second row with Subject and Preferred Contact Method-->
+                    <div>
+                        <label for="subject">Subject:</label>
+                         <input type="text" id="subject" name="subject" required>
+                    </div>
+
+                    <div>
+                        <label for="contactMethod">Preferred Contact Method</label>
+                        <select id="contactMethod" name="contactMethod">
+                            <option value="">Please Select:</option>
+                            <option value="email">Email</option>
+                            <option value="phone">Phone</option>
+                            <option value="txtMsg">Text Message</option>
+                        </select>
+                    </div>
+
+                    <!--Third row with Message with Submit button below-->
+                    <div>
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" placeholder="Your message here . . ." rows="5" cols="50" required></textarea>
+                    </div>
+
+                    <div>
+                        <input type="submit" value="Send">
+                    </div>
+                </form>
+            </section>
+        </main>
+        <hr>
+
+        <footer>
+            <p>
+                &copy; 2025 Wilder Residential Services |
+                Follow Us: <a href="https://www.facebook.com/profile.php?id=61565019860408" target="_blank">Facebook</a> |
+                <a href="https://www.instagram.com/wilder.residential.services/?fbclid=IwY2xjawMpCj9leHRuA2FlbQIxMABicmlkETF1cHFBTWRQaU4xcEdad3lpAR5umB_Ydm0c_Sfv_pxtSG1GDZ4h_CniLZdB-6uSis7mLVCk8QL5-dDrnZJFag_aem_ZYnn_goey3Xkmxmk8frJ2w#" target="_blank">Instagram</a>
+            </p>
+        </footer>
+    </body>
+</html>
