@@ -1,0 +1,560 @@
+
+/*Sets the basic styles acroos all pages, including colors and the font*/
+:root {
+    --bg-color: #FCF9EC;
+    --fnt-fam: Georgia, serif;
+    --dark-text-col: #000000;
+    --light-text-col: #faf3df;
+    --bg-almost-white: rgb(250, 252, 255);
+    --bg-footer: #111827;
+    --gldn-accent: #f9c95b;
+}
+
+/*Divides the header into 2 section: one for logo, one for navigation; applies styles such as bottom border for more separation*/
+header {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--bg-almost-white);
+    border-bottom: 3px solid var(--gldn-accent);
+}
+
+
+
+
+
+
+/*Styles the h1 to have a gold gradient*/
+h1 {
+    background-image: linear-gradient(to bottom right, #f9c95b, #090800);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/*Styles img of the logo to be smaller than before*/
+.logoAndName img {
+    height: 100px;
+}
+
+/*Styles the logo and name to be side by side with some extra spacing*/
+.logoAndName a {
+    display: grid;
+    grid-template-columns: auto auto;
+    text-decoration: none;
+    align-items: center;
+    column-gap: 15px;
+    margin-left: 15px;
+}
+
+/*Puts the links on one row, wraps them, and adjusts spacing*/
+.navLinks ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    gap: 25px 50px;
+    margin-right: 35px;
+}
+
+/*Removes link underline, also styles the links to be larger and darker*/
+.navLinks a {
+    text-decoration: none;
+    font-size: 1.5em;
+    color: var(--dark-text-col);
+}
+
+/*Changes the link color on hover to the gold accent color and makes it bolder*/
+header a:hover {
+    color: var(--gldn-accent);
+    font-weight: bold;
+}
+
+
+
+
+
+/*Sets the basic styles for the body, including background, font, text color, and margin*/
+body {
+    background-color: var(--bg-color);
+    font-family: var(--fnt-fam);
+    color: var(--dark-text-col);
+    margin: 0px;
+}
+
+
+
+
+
+/*Acts as container for the overlay, centers text, and applies lighter text color*/
+.welcomeSection {
+    position: relative;
+    text-align: center;
+    color: var(--light-text-col);
+}
+
+/*Image takes up about a third of the viewport*/
+.welcomeSection img {
+    width:100%;
+    height: 30vh;
+    object-fit: cover;
+}
+
+/*Centers the welcome message in the middle of the image and applies some styles, such as background*/
+.centeredWelcome {
+    position: absolute;
+    top: 50%;
+    width: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(17, 24, 39, 0.85);
+    padding: 1px 15px;
+    border-radius: 3em;
+    }
+
+/*Gives h2 a larger font size*/
+.centeredWelcome h2 {
+    font-size: 2em;
+}
+
+/*Gives h3 golden accent color and increases font*/
+.centeredWelcome h3 {
+    color: var(--gldn-accent);
+    font-size: 1.3em;
+}
+
+/*Sets the font size for paragraphs to 18px instead of the standard 16px*/
+p {font-size: 18px;}
+
+/*Adds consistent padding to the left and right*/
+ .leftRightPadding {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/*Helps center the contact information on the page*/
+#contactBannerInfo {
+    display: inline-block;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*Makes the spans inside of the address bold*/
+address span {
+    font-weight: bold;
+}
+
+
+
+
+
+/*Styles the banner with a gradient background, helps center the text on the gradient, sets height viewpoint, and applies padding*/
+.gradientBanner {
+    background: linear-gradient(to right, #DA8F2A, #f9c95b, #EDCDA3);
+    position: relative;
+    height: 18vh;
+    padding: 5vh;
+    text-align: center;
+}
+
+/*Styles the promotion box to be centered in the banner, applies background color, border, and padding*/
+.promotion {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    width: 60%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    background-color: #f9f4dd;
+    border-radius: 10em;
+    padding: 1.1em;
+    border: 3px solid var(--gldn-accent);
+    box-shadow:
+    0 0 0 5px var(--bg-almost-white);
+}
+
+/*Styles the percent off text to be larger, red, and have a golden text shadow for more attention*/
+#percentOff {
+    color: red;
+    font-size: 40px;
+    font-weight: bold;
+    margin: 0px;
+    text-shadow: 
+        1px 1px 10px var(--gldn-accent),
+        -1px 1px 10px var(--gldn-accent),
+        -1px -1px 10px var(--gldn-accent),
+        1px -1px 10px var(--gldn-accent);
+}
+
+/*Styles header sections to be centered, have padding, and remove margins*/
+.centeredHeadings {
+    text-align: center;
+    padding: 15px 75px;
+    margin:0px;
+}
+
+/*Styles header sections to have a black background and light text color*/
+.whiteHeadings {
+    color: var(--light-text-col);
+    background-color: #000000;
+}
+
+/*Styles the reviews section to have padding, margin, background color, border around reviews, and rounded edges*/
+.reviewsSection p {
+    padding: 10px 50px;
+    margin-left: 5.5em;
+    margin-right: 5.5em;
+    background-color: var(--bg-almost-white);
+    border: 3px solid var(--gldn-accent);
+    border-radius: 5em;
+}
+
+/*Applies a black background with some padding and center alignment on page.*/
+.blackBg {
+    background-color: #000000;
+    padding-bottom: 20px;
+    text-align: center;
+    position: relative;
+}
+
+/*Styles the contact us section to have a gold accent background, rounded edges, centered text, padding, and be centered*/
+.contactTodayWithNumber {
+    background-color: var(--gldn-accent);
+    border-radius: 5em;
+    width: fit-content;
+    padding: 10px 25px;
+    margin: auto;
+}
+
+/*Styles the paragraph and link in the contact us section to be bold, dark text color, no underline, larger font size, and some margin*/
+.contactTodayWithNumber p, .contactTodayWithNumber a, .blackBg a {
+    color: var(--dark-text-col);
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.2em;
+    margin: 3px;
+}
+
+/*Changes the link color on hover to red for more attention*/
+.contactTodayWithNumber a:hover, .blackBg a:hover, .promotion a:hover {
+    color: red;
+}       
+
+
+
+
+
+/*Applies golden accent color background, removes margins, adds padding, and bolds text*/
+.goldBg {
+    background-color: var(--gldn-accent);
+    margin: 0px;
+    padding: 20px;
+    font-weight: bold;
+}
+
+/*Applies golden accent to text; specifically, to the navigation links and uses shadows to give an outline*/
+.navLinks .goldAcntTxt {
+    color: var(--gldn-accent);
+        text-shadow: 
+        1px 1px 1px var(--dark-text-col),
+        -1px 1px 1px var(--dark-text-col),
+        -1px -1px 1px var(--dark-text-col),
+        1px -1px 1px var(--dark-text-col);
+}
+
+/*Applies a little more space between list items*/
+.goldBg li {
+    padding-bottom: 5px;
+}
+
+
+
+
+
+/*Styles the details element so that cursor becomes a pointer when hovered over, also styles the border, margin, and padding to improve readability*/
+details {
+    cursor: pointer;
+    border-radius: 15px;
+    margin-left: 20px;
+    margin: 20px 20px;
+    background-color: var(--bg-almost-white);
+    border: 3px solid var(--gldn-accent);
+    padding: 10px 10px;
+}
+
+/*Makes the summary text bigger and bolder*/
+summary {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/*Makes links black and with gives a golden background with some padding and radius adjustments*/
+details a {
+    color: var(--dark-text-col);
+    background-color: var(--gldn-accent);
+    padding: 3px;
+    border-radius: 15px;
+}
+
+/*Bolds, underlines, and adds padding to the term "Deep Cleaning Package"*/
+.deepCleanPack {
+    font-weight: bold;
+    text-decoration: underline;
+    padding: 3px;
+}
+
+
+
+
+
+/*Divides the grid into three columns and adds spacing with width restrictions*/
+.contactGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px 50px;
+    max-width: 1500px;
+}
+
+/*Limits the width of the message box*/
+textarea {
+    max-width: 1500px;
+}
+
+/*Puts labels on top of the form spaces and makes the text bold*/
+label {
+    display: block;
+    margin-bottom: 5px;
+    margin-top: 12px;
+    font-weight: bold;
+}
+
+/*Changes the font family, padding, and border to use the golden accent color for the textaarea, inputs, and drop down select*/
+textarea, input, select {
+    width: 100%;
+    border: 2px solid var(--gldn-accent);
+    font-family: var(--fnt-fam);
+    font-size: 16px;
+    padding-bottom: 7px;
+    padding-top: 7px;
+    padding-left: 3px;
+}
+
+/*Styles the send in terms of size, color, and margin to match color scheme and layout*/
+input[type="submit"] {
+    background-color: var(--gldn-accent);
+    color: var(--dark-text-col);
+    font-weight: bold;
+    cursor: pointer;
+    width: 80px;
+    border: 2px solid var(--dark-text-col);
+    border-radius: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/*Changes the send in size and color—from light to dark when hovered over—and adds a pointer*/
+input[type="submit"]:hover {
+    background-color: var(--dark-text-col);
+    color: var(--light-text-col);
+    font-weight: bold;
+    cursor: pointer;
+    border: 2px solid var(--dark-text-col);
+    border-radius: 15px;
+}
+
+
+
+
+
+/*Establishes a two colum grid. Image of owner is on the left, and information about her is on the right. There is some margin spacing to help with layot*/
+#ownerSection {
+    display: grid;
+    grid-template-columns: 45% 1fr;
+    margin: 30px 15px;
+    margin-right: 10%;
+    justify-items: center;
+}
+
+/*Gives owner's image a dashed, outlined background with the gold and black accent color and adjusts image size*/
+#ownerSection img {
+    width: 250px;
+    border: 15px dashed var(--gldn-accent);
+    box-shadow:
+    0 0 0 5px var(--dark-text-col);
+}
+
+/*Centers and increases size of the text that is above the owner's image*/
+ #ownerSection h2 {
+    text-align: center;
+    font-size: 30px;
+}
+
+/*Lowers the first p tag in "Meet the Owner" section*/
+#ownerSection div p:first-child {
+    margin-top: 80px;
+}
+
+
+
+
+
+
+/*Four column grid for centered gallery photos*/
+.cleaningGallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    justify-items: center;
+    margin-bottom: 25px;
+}
+
+/*Image size adjustments and border styles*/
+.cleaningGallery img {
+    width: 180px;
+    height: 250px;
+    border: 2px solid var(--gldn-accent);
+}
+
+
+
+
+
+/*Below are styles for the footer across all pages*/
+/*Styles the footer to have a dark background and light text, with spacing between WRS and Follow Us*/
+footer {
+    background-color: var(--bg-footer);
+    color: var(--light-text-col);
+    padding: 15px;
+    display: flex;
+    justify-content: space-around;
+}
+
+/*Styles the first p tag to have a gold gradient*/
+footer p:first-child {
+    background-image: linear-gradient(to right, #f9c95b, #fbf9ec);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/*Adds spacing between the two paragraphs in the footer for better readability*/
+footer p + p {
+    margin-left: 50px;
+}
+
+/*Styles the links in the footer to have light text color and more spacing between them*/
+footer a {
+    color: var(--light-text-col);
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/*Changes the link color on hover to the gold accent color and makes it bolder*/
+footer a:hover {
+    color: var(--gldn-accent);
+    font-weight: bold;
+}
+
+
+
+
+
+/*The below dropAnim animation and keyframes gives a smoother transition when the summary is opened*/
+details[open] p {
+    animation: dropAnim 0.4s linear forwards;
+}
+
+@keyframes dropAnim {
+    0% {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+
+
+/*Adjusts the layout for smaller screens*/
+@media screen and (max-width: 750px) {
+    /*Header becomes single column with navigation under logo*/
+    header {
+        grid-template-columns: auto;
+        justify-items: center;
+    }
+
+    /*navigation links and centers them*/
+    .navLinks ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    /*Stacks WRS and the Follow Us links*/
+    footer {
+        flex-direction: column;
+        text-align: center;
+        row-gap: 10px;
+    }
+
+    /*Removes previous left margin*/
+    footer p + p {
+        margin-left: 0px;
+    }
+
+    /*Removes the image in the welcome section*/
+    .welcomeSection img {
+        display: none;
+    }
+
+    /*Adjusts the height of the welcome section to fit the text*/
+    .welcomeSection {
+        height: auto;
+    }
+    
+    /*Removes and edits some previous styling so that the text fits the screen and applies a drop shadow*/
+    .centeredWelcome {
+        position: static;
+        transform: none;
+        width: auto;
+        margin: 25px;
+        background-color: rgba(17, 24, 39, 0.95);
+        box-shadow: 5px 5px 10px 3px var(--gldn-accent);
+    }
+
+    /*Adjusts the margins so that text covers more of the screen width than before*/
+    .reviewsSection p {
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+
+    /*When the screensize is smaller, there is only 1 form colum and added margins*/
+    
+        .contactGrid {
+            grid-template-columns: auto;
+            margin: 1em;
+        }
+    
+    
+    /*Smaller screen sizes get one column instead of two. Top features owner's image and below is information about her*/
+    
+        #ownerSection {
+            grid-template-columns: 1fr;
+            padding: 10px;
+        }
+    
+
+    /*Smaller screen sizes get two columns instead of four for displaying cleaning images*/
+    
+        .cleaningGallery {
+            grid-template-columns: 1fr 1fr;
+        } 
+}
