@@ -3,26 +3,26 @@
     <head>
         <meta charset="UTF-8">
         <title>Services WRS</title>
-        <link href="style.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
     </head>
 
     <body>
         <header>
-             <!--Logo and WRS-->
-            <div>
+            <!--Logo and WRS-->
+            <div class="logoAndName">
                 <a href="index.html">
                     <img src="WRSImages/TrnsprntLogoCircle.png" alt="WRS logo">
-                    <h1>Wilder Residential Services</h1>
+                    <h1>Wilder <br> Residential Services</h1>
                 </a>
             </div>
             
             <!--Links to other pages-->
             <div>
-                <nav>
+                <nav class="navLinks">
                     <ul>
-                        <li><a href="about.html" target="_blank">About</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="form.html" target="_blank">Contact</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html" class="goldAcntTxt">Services</a></li>
+                        <li><a href="form.html">Contact</a></li>
                     </ul>
                 </nav>
             </div>
@@ -30,50 +30,52 @@
 
         <main>
             <!--Image background and initial message-->
-            <section>
+            <section class="welcomeSection">
                 <img src="WRSImages/laundryServicesBG.jpg" alt="A wicker laundry basket filled with folded white and beige towels in a laundry room.">
-                <h2>Cleaning Services</h2>
+                <div class="centeredWelcome">
+                    <h2>Cleaning Services</h2>
+                </div>
             </section>
-            <hr>
+
             
 
             <!--Residential packages section-->
-            <section>
+            <section class="leftRightPadding">
                 <h2>Residential: What We Can Do For You</h2>
-                <details>
+                <details id="packageOne">
                     <summary>Package 1: Light, refreshing cleaning for regular upkeep</summary>
                     <p>includes kitchen, bathroom, living room, and trash removal.</p>
                 </details>
 
-                <details>
+                <details id="packageTwo">
                     <summary>Package 2: Gentle, but powerful cleaning for a fresh, airy space</summary>
-                    <p>Everything in Package 1, including sweeping/mopping/vacuuming of all rooms.</p>
+                    <p>Everything in <a href="#packageOne">Package 1</a>, including sweeping/mopping/vacuuming of all rooms.</p>
                 </details>
 
-                <details>
+                <details id="packageThree">
                     <summary>Package 3: Premium cleaning with extra care and attention to detail</summary>
-                    <p>Everything in Package 2, including intensive cleaning of all appliances, dishes, ceiling fans, light fixtures, wall plugs, baseboards, shelves, drawers, interior doors/frames, windows, and dusting.</p>
+                    <p>Everything in <a href="#packageTwo">Package 2</a>, including intensive cleaning of all appliances, dishes, ceiling fans, light fixtures, wall plugs, baseboards, shelves, drawers, interior doors/frames, windows, and dusting.</p>
                 </details>
 
                 <details>
                     <summary>Package 4: Customizable cleaning option tailored to your needs</summary>
-                    <p>Move-out/Move-In Deep Cleaning Package (priced by sq. ft. of home and level of cleaning needed)</p>
-
-                    <p>Deep Cleaning Package:</p>
-                    <p>Everything in Package 3, including help with removal of any debris, garage cleaning, and organizing.</p>
+                    <p>Move-out/Move-In <span class="deepCleanPack">Deep Cleaning Package</span> (priced by sq. ft. of home and level of cleaning needed)</p>
+                    <hr>
+                    <p><span class="deepCleanPack">Deep Cleaning Package:</span></p>
+                    <p>Everything in <a href="#packageThree">Package 3</a>, including help with removal of any debris, garage cleaning, and organizing.</p>
                 </details>
             </section>
-            <hr>
+
 
             <!--Schedule appointment section-->
-            <section>
-                <h2>Schedule Your Appointment Or Request a Free Quote Today!</h2>
-                 <a href="tel:(803)542-6443">(803) 542-6443</a> 
+            <section class="blackBg">
+                <h2 class="centeredHeadings whiteHeadings">Schedule Your Appointment Or Request a Free Quote Today!</h2>
+                 <a class="contactTodayWithNumber" href="tel:803-542-6443">(803) 542-6443</a> 
             </section>
-            <hr>
+
 
             <!--Cleaning Prepartion section-->
-            <section>
+            <section class="goldBg">
                 <h2>Preparing for your first cleaning is simple!</h2>
                 <ol>
                     <li>Get in touch with our team</li>
@@ -83,10 +85,10 @@
                     <li>Leave the rest to our cleaning team!</li>
                 </ol> 
             </section>
-            <hr>
+
 
             <!--Commercial packages section-->
-           <section>
+           <section class="leftRightPadding">
             <h2>Commercial: What We Can Do For You</h2>
             <p>A dirty space does not have to be only a home. At Wilder Residential Services, we also offer scheduled cleanings for businesses and organizations. Receive a discount when you schedule reoccurring services.</p>
                 
@@ -111,14 +113,16 @@
                 </details>
             </section>
         </main>
-        <hr>
+
 
         <footer>
-            <p>
-                &copy; 2025 Wilder Residential Services |
-                Follow Us: <a href="https://www.facebook.com/profile.php?id=61565019860408" target="_blank">Facebook</a> |
-                <a href="https://www.instagram.com/wilder.residential.services/?fbclid=IwY2xjawMpCj9leHRuA2FlbQIxMABicmlkETF1cHFBTWRQaU4xcEdad3lpAR5umB_Ydm0c_Sfv_pxtSG1GDZ4h_CniLZdB-6uSis7mLVCk8QL5-dDrnZJFag_aem_ZYnn_goey3Xkmxmk8frJ2w#" target="_blank">Instagram</a>
-            </p>
+                <p>
+                    &copy; 2025 Wilder Residential Services
+                </p>
+                <p>
+                    Follow Us: <a href="https://www.facebook.com/profile.php?id=61565019860408" target="_blank">Facebook</a> |
+                    <a href="https://www.instagram.com/wilder.residential.services/?fbclid=IwY2xjawMpCj9leHRuA2FlbQIxMABicmlkETF1cHFBTWRQaU4xcEdad3lpAR5umB_Ydm0c_Sfv_pxtSG1GDZ4h_CniLZdB-6uSis7mLVCk8QL5-dDrnZJFag_aem_ZYnn_goey3Xkmxmk8frJ2w#" target="_blank">Instagram</a>
+                </p>
         </footer>
     </body>
 </html>
