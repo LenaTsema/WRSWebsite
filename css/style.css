@@ -1,4 +1,4 @@
-/*Sets the basic styles acroos all pages, including colors and the font*/
+/*Sets the basic styles across all pages, including colors and the font*/
 :root {
     --bg-color: #FCF9EC;
     --fnt-fam: Georgia, serif;
@@ -141,7 +141,7 @@ p {font-size: 18px;}
     transform: translate(-50%, -50%);
 }
 
-/*Makes the spans inside of the address bold*/
+/*Makes the spans inside of the address section bold*/
 address span {
     font-weight: bold;
 }
@@ -175,7 +175,7 @@ address span {
     0 0 0 5px var(--bg-almost-white);
 }
 
-/*Styles the percent off text to be larger, red, and have a golden text shadow for more attention*/
+/*Styles the coupon percentage text to be larger, red, and have a golden text shadow for more attention*/
 #percentOff {
     color: red;
     font-size: 40px;
@@ -228,7 +228,7 @@ address span {
     margin: auto;
 }
 
-/*Styles the paragraph and link in the contact us section to be bold, dark text color, no underline, larger font size, and some margin*/
+/*Styles the paragraph and link in the contact us section to be bold, a dark text color, have no underline, have a larger font size, and some margin*/
 .contactTodayWithNumber p, .contactTodayWithNumber a, .blackBg a {
     color: var(--dark-text-col);
     font-weight: bold;
@@ -290,7 +290,7 @@ summary {
     font-weight: bold;
 }
 
-/*Makes links black and with gives a golden background with some padding and radius adjustments*/
+/*Makes links black and gives them a golden background with some padding and radius adjustments*/
 details a {
     color: var(--dark-text-col);
     background-color: var(--gldn-accent);
@@ -330,7 +330,7 @@ label {
     font-weight: bold;
 }
 
-/*Changes the font family, padding, and border to use the golden accent color for the textaarea, inputs, and drop down select*/
+/*Changes the font family, padding, and border to use the golden accent color for the textaarea, inputs, and drop down selection*/
 textarea, input, select {
     width: 100%;
     border: 2px solid var(--gldn-accent);
@@ -341,7 +341,7 @@ textarea, input, select {
     padding-left: 3px;
 }
 
-/*Styles the send in terms of size, color, and margin to match color scheme and layout*/
+/*Styles the send button in terms of size, color, and margin to match color scheme and layout*/
 input[type="submit"] {
     background-color: var(--gldn-accent);
     color: var(--dark-text-col);
@@ -354,7 +354,7 @@ input[type="submit"] {
     margin-bottom: 10px;
 }
 
-/*Changes the send in size and color—from light to dark when hovered over—and adds a pointer*/
+/*Changes the send button to the opposite colors when hovered over—and adds a pointer*/
 input[type="submit"]:hover {
     background-color: var(--dark-text-col);
     color: var(--light-text-col);
@@ -377,7 +377,7 @@ input[type="submit"]:hover {
     justify-items: center;
 }
 
-/*Gives owner's image a dashed, outlined background with the gold and black accent color and adjusts image size*/
+/*Gives owner's image a dashed, outlined background with the gold and black accent color and adjusts the image size*/
 #ownerSection img {
     width: 250px;
     border: 15px dashed var(--gldn-accent);
@@ -443,7 +443,7 @@ footer p + p {
     margin-left: 50px;
 }
 
-/*Styles the links in the footer to have light text color and more spacing between them*/
+/*Styles the links in the footer to be a lighter color and add more spacing between them*/
 footer a {
     color: var(--light-text-col);
     margin-left: 10px;
@@ -490,7 +490,7 @@ details[open] p {
         justify-items: center;
     }
 
-    /*navigation links and centers them*/
+    /*Adjusts navigation links and centers them*/
     .navLinks ul {
         flex-direction: column;
         align-items: center;
@@ -519,7 +519,7 @@ details[open] p {
         height: auto;
     }
     
-    /*Removes and edits some previous styling so that the text fits the screen and applies a drop shadow*/
+    /*Removes and edits some previous styling so that the text fits the screen and applies a drop shadow to the content in place of the image*/
     .centeredWelcome {
         position: static;
         transform: none;
@@ -536,23 +536,20 @@ details[open] p {
     }
 
     /*When the screensize is smaller, there is only 1 form colum and added margins*/
-    
         .contactGrid {
             grid-template-columns: auto;
             margin: 1em;
         }
     
     
-    /*Smaller screen sizes get one column instead of two. Top features owner's image and below is information about her*/
-    
+    /*Smaller screen sizes get one column instead of two. Top features owner's image and below is the continued information about her*/
         #ownerSection {
             grid-template-columns: 1fr;
             padding: 10px;
         }
     
 
-    /*Smaller screen sizes get two columns instead of four for displaying cleaning images*/
-    
+    /*Smaller screen sizes get two columns instead of four from before for displaying cleaning images*/
         .cleaningGallery {
             grid-template-columns: 1fr 1fr;
         } 
