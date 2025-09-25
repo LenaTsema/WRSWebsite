@@ -1,4 +1,5 @@
-/*Sets the basic styles across all pages, including colors and the font*/
+
+/*Sets the basic styles acroos all pages, including colors and the font*/
 :root {
     --bg-color: #FCF9EC;
     --fnt-fam: Georgia, serif;
@@ -16,9 +17,8 @@ header {
     justify-content: space-between;
     align-items: center;
     background-color: var(--bg-almost-white);
-    border-bottom: 3px solid var(--gldn-accent);
+    border-bottom: 3px solid var(--gldn-accent);    
 }
-
 
 
 
@@ -26,10 +26,14 @@ header {
 
 /*Styles the h1 to have a gold gradient*/
 h1 {
-    background-image: linear-gradient(to bottom right, #f9c95b, #090800);
+    background-image: linear-gradient(to bottom right, #f9ba27, #090800);
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
+    
+
+
 
 /*Styles img of the logo to be smaller than before*/
 .logoAndName img {
@@ -56,11 +60,12 @@ h1 {
     margin-right: 35px;
 }
 
-/*Removes link underline, also styles the links to be larger and darker*/
+/*Removes link underline, also styles the links to be larger and darker. Adds padding for larger navigation link hit target/box*/
 .navLinks a {
     text-decoration: none;
-    font-size: 1.5em;
+    font-size: 1.5rem;
     color: var(--dark-text-col);
+    padding: 1rem 1.5rem;
 }
 
 /*Changes the link color on hover to the gold accent color and makes it bolder*/
@@ -69,6 +74,16 @@ header a:hover {
     font-weight: bold;
 }
 
+/*Applies a black outline to the navigation linked when hovered over*/
+header nav a:hover {
+    color: var(--gldn-accent);
+    font-weight: bold;
+    text-shadow: 
+        1px 1px 1px var(--dark-text-col),
+        -1px 1px 1px var(--dark-text-col),
+        -1px -1px 1px var(--dark-text-col),
+        1px -1px 1px var(--dark-text-col);
+}
 
 
 
@@ -108,22 +123,22 @@ body {
     transform: translate(-50%, -50%);
     background-color: rgba(17, 24, 39, 0.85);
     padding: 1px 15px;
-    border-radius: 3em;
+    border-radius: 3rem;
     }
 
 /*Gives h2 a larger font size*/
 .centeredWelcome h2 {
-    font-size: 2em;
+    font-size: 2rem;
 }
 
 /*Gives h3 golden accent color and increases font*/
 .centeredWelcome h3 {
     color: var(--gldn-accent);
-    font-size: 1.3em;
+    font-size: 1.3rem;
 }
 
-/*Sets the font size for paragraphs to 18px instead of the standard 16px*/
-p {font-size: 18px;}
+/*Sets the font size for paragraphs to 18px, or 1.125rem instead of the standard 16px*/
+p {font-size: 1.125rem;}
 
 /*Adds consistent padding to the left and right*/
  .leftRightPadding {
@@ -141,7 +156,7 @@ p {font-size: 18px;}
     transform: translate(-50%, -50%);
 }
 
-/*Makes the spans inside of the address section bold*/
+/*Makes the spans inside of the address bold*/
 address span {
     font-weight: bold;
 }
@@ -150,13 +165,14 @@ address span {
 
 
 
-/*Styles the banner with a gradient background, helps center the text on the gradient, sets height viewpoint, and applies padding*/
+/*Styles the banner with a gradient background, helps center the text on the gradient, sets height viewpoint, and applies padding with margin for better spacing*/
 .gradientBanner {
     background: linear-gradient(to right, #DA8F2A, #f9c95b, #EDCDA3);
     position: relative;
-    height: 18vh;
-    padding: 5vh;
     text-align: center;
+    height: 18vh;
+    padding: 4rem;
+    margin-bottom: 1.5rem;
 }
 
 /*Styles the promotion box to be centered in the banner, applies background color, border, and padding*/
@@ -168,24 +184,44 @@ address span {
     transform: translate(-50%, -50%);
     left: 50%;
     background-color: #f9f4dd;
-    border-radius: 10em;
-    padding: 1.1em;
+    border-radius: 10rem;
+    padding: 1.1rem;
     border: 3px solid var(--gldn-accent);
-    box-shadow:
-    0 0 0 5px var(--bg-almost-white);
+    box-shadow: 0 0 0 5px var(--bg-almost-white);
 }
 
-/*Styles the coupon percentage text to be larger, red, and have a golden text shadow for more attention*/
+/*Increases h2 font size in the promotion section and decreases the margin to 0.5 rem*/
+.promotion h2 {
+    font-size: 1.7rem;
+    margin: 0.5rem;
+}
+
+/*Bolds p text in the promotion section and decreases the margin to 0.5 rem*/
+.promotion p {
+    font-weight: bold;
+    margin: 0.5rem;
+}
+
+/*removes the margin*/
+.noMargin {
+    margin: 0px;
+}
+
+.noWrapping {
+    white-space: nowrap;
+}
+
+/*Styles the percent off text to be larger, red, and have a golden text shadow for more attention*/
 #percentOff {
     color: red;
-    font-size: 40px;
+    font-size: 3.2rem;
     font-weight: bold;
     margin: 0px;
     text-shadow: 
-        1px 1px 10px var(--gldn-accent),
-        -1px 1px 10px var(--gldn-accent),
-        -1px -1px 10px var(--gldn-accent),
-        1px -1px 10px var(--gldn-accent);
+        1px 1px 5px var(--gldn-accent),
+        -1px 1px 5px var(--gldn-accent),
+        -1px -1px 5px var(--gldn-accent),
+        1px -1px 5px var(--gldn-accent);
 }
 
 /*Styles header sections to be centered, have padding, and remove margins*/
@@ -204,11 +240,11 @@ address span {
 /*Styles the reviews section to have padding, margin, background color, border around reviews, and rounded edges*/
 .reviewsSection p {
     padding: 10px 50px;
-    margin-left: 5.5em;
-    margin-right: 5.5em;
+    margin-left: 5.5rem;
+    margin-right: 5.5rem;
     background-color: var(--bg-almost-white);
     border: 3px solid var(--gldn-accent);
-    border-radius: 5em;
+    border-radius: 5rem;
 }
 
 /*Applies a black background with some padding and center alignment on page.*/
@@ -222,18 +258,18 @@ address span {
 /*Styles the contact us section to have a gold accent background, rounded edges, centered text, padding, and be centered*/
 .contactTodayWithNumber {
     background-color: var(--gldn-accent);
-    border-radius: 5em;
+    border-radius: 5rem;
     width: fit-content;
     padding: 10px 25px;
     margin: auto;
 }
 
-/*Styles the paragraph and link in the contact us section to be bold, a dark text color, have no underline, have a larger font size, and some margin*/
+/*Styles the paragraph and link in the contact us section to be bold, dark text color, no underline, larger font size, and some margin*/
 .contactTodayWithNumber p, .contactTodayWithNumber a, .blackBg a {
     color: var(--dark-text-col);
     font-weight: bold;
     text-decoration: none;
-    font-size: 1.2em;
+    font-size: 1.2rem;
     margin: 3px;
 }
 
@@ -241,6 +277,7 @@ address span {
 .contactTodayWithNumber a:hover, .blackBg a:hover, .promotion a:hover {
     color: red;
 }       
+
 
 
 
@@ -286,11 +323,11 @@ details {
 
 /*Makes the summary text bigger and bolder*/
 summary {
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: bold;
 }
 
-/*Makes links black and gives them a golden background with some padding and radius adjustments*/
+/*Makes links black and with gives a golden background with some padding and radius adjustments*/
 details a {
     color: var(--dark-text-col);
     background-color: var(--gldn-accent);
@@ -330,31 +367,31 @@ label {
     font-weight: bold;
 }
 
-/*Changes the font family, padding, and border to use the golden accent color for the textaarea, inputs, and drop down selection*/
+/*Changes the font family, padding, and border to use the golden accent color for the textaarea, inputs, and drop down select*/
 textarea, input, select {
     width: 100%;
     border: 2px solid var(--gldn-accent);
     font-family: var(--fnt-fam);
-    font-size: 16px;
+    font-size: 1.125rem;
     padding-bottom: 7px;
     padding-top: 7px;
     padding-left: 3px;
 }
 
-/*Styles the send button in terms of size, color, and margin to match color scheme and layout*/
+/*Styles the send message button in terms of size, color, and margin to match color scheme and layout*/
 input[type="submit"] {
     background-color: var(--gldn-accent);
     color: var(--dark-text-col);
     font-weight: bold;
     cursor: pointer;
-    width: 80px;
+    width: 10rem;
     border: 2px solid var(--dark-text-col);
     border-radius: 15px;
     margin-top: 10px;
     margin-bottom: 10px;
 }
 
-/*Changes the send button to the opposite colors when hovered over—and adds a pointer*/
+/*Changes the send in size and color—from light to dark when hovered over—and adds a pointer*/
 input[type="submit"]:hover {
     background-color: var(--dark-text-col);
     color: var(--light-text-col);
@@ -377,7 +414,7 @@ input[type="submit"]:hover {
     justify-items: center;
 }
 
-/*Gives owner's image a dashed, outlined background with the gold and black accent color and adjusts the image size*/
+/*Gives owner's image a dashed, outlined background with the gold and black accent color and adjusts image size*/
 #ownerSection img {
     width: 250px;
     border: 15px dashed var(--gldn-accent);
@@ -388,7 +425,7 @@ input[type="submit"]:hover {
 /*Centers and increases size of the text that is above the owner's image*/
  #ownerSection h2 {
     text-align: center;
-    font-size: 30px;
+    font-size: 1.875rem;
 }
 
 /*Lowers the first p tag in "Meet the Owner" section*/
@@ -443,7 +480,7 @@ footer p + p {
     margin-left: 50px;
 }
 
-/*Styles the links in the footer to be a lighter color and add more spacing between them*/
+/*Styles the links in the footer to have light text color and more spacing between them*/
 footer a {
     color: var(--light-text-col);
     margin-left: 10px;
@@ -490,7 +527,7 @@ details[open] p {
         justify-items: center;
     }
 
-    /*Adjusts navigation links and centers them*/
+    /*navigation links and centers them*/
     .navLinks ul {
         flex-direction: column;
         align-items: center;
@@ -519,7 +556,7 @@ details[open] p {
         height: auto;
     }
     
-    /*Removes and edits some previous styling so that the text fits the screen and applies a drop shadow to the content in place of the image*/
+    /*Removes and edits some previous styling so that the text fits the screen and applies a drop shadow*/
     .centeredWelcome {
         position: static;
         transform: none;
@@ -531,26 +568,29 @@ details[open] p {
 
     /*Adjusts the margins so that text covers more of the screen width than before*/
     .reviewsSection p {
-        margin-left: 1em;
-        margin-right: 1em;
+        margin-left: 1rem;
+        margin-right: 1rem;
     }
 
     /*When the screensize is smaller, there is only 1 form colum and added margins*/
-        .contactGrid {
-            grid-template-columns: auto;
-            margin: 1em;
-        }
+    
+     .contactGrid {
+        grid-template-columns: auto;
+        margin: 1rem;
+    }
     
     
-    /*Smaller screen sizes get one column instead of two. Top features owner's image and below is the continued information about her*/
-        #ownerSection {
-            grid-template-columns: 1fr;
-            padding: 10px;
-        }
+    /*Smaller screen sizes get one column instead of two. Top features owner's image and below is information about her*/
+    
+    #ownerSection {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
     
 
-    /*Smaller screen sizes get two columns instead of four from before for displaying cleaning images*/
-        .cleaningGallery {
-            grid-template-columns: 1fr 1fr;
-        } 
+    /*Smaller screen sizes get two columns instead of four for displaying cleaning images*/
+    
+    .cleaningGallery {
+        grid-template-columns: 1fr 1fr;
+    } 
 }
