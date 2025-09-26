@@ -68,12 +68,6 @@ h1 {
     padding: 1rem 1.5rem;
 }
 
-/*Changes the link color on hover to the gold accent color and makes it bolder*/
-header a:hover {
-    color: var(--gldn-accent);
-    font-weight: bold;
-}
-
 /*Applies a black outline to the navigation linked when hovered over*/
 header nav a:hover {
     color: var(--gldn-accent);
