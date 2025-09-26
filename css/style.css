@@ -347,8 +347,11 @@ details a {
 /*Bolds, underlines, and adds padding to the term "Deep Cleaning Package"*/
 .deepCleanPack {
     font-weight: bold;
-    text-decoration: underline;
     padding: 3px;
+    color: var(--light-text-col);
+    background-color: var(--bg-footer);
+    border-radius: 3rem;
+    padding: 0.3rem 1rem;
 }
 
 
