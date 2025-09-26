@@ -304,14 +304,16 @@ address span {
     font-weight: bold;
 }
 
-/*Applies golden accent to text; specifically, to the navigation links and uses shadows to give an outline*/
+/*Applies golden accent to text; specifically, to the navigation links and uses shadows to give an outline while also increases the font-size for better readability*/
 .navLinks .goldAcntTxt {
     color: var(--gldn-accent);
-        text-shadow: 
-        1px 1px 1px var(--dark-text-col),
+    text-shadow: 
+        2px 2px 1px var(--dark-text-col),
         -1px 1px 1px var(--dark-text-col),
         -1px -1px 1px var(--dark-text-col),
         1px -1px 1px var(--dark-text-col);
+    letter-spacing: 1px;
+    font-size: 1.8rem;
 }
 
 /*Applies a little more space between list items*/
