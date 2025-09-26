@@ -723,18 +723,6 @@ details[open] p {
         max-width: 30%;
     }
 
-    /*Puts the reviews into a 2 column grid and fixes spaces for better readability*/
-    #bothReviews {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 2rem;
-        margin-top: 1.25rem;
-    }
-
-    .reviewsSection p {
-        max-width: 500px;
-    }
-
     /*Restricts width of welcome message section*/
     .centeredWelcome {
         max-width: 45%;
@@ -743,14 +731,19 @@ details[open] p {
     /*Turns into 2 column grid for the reviews with spacing and width adjustments*/
     #bothReviews {
         display: grid;
-        grid-template-columns: auto auto;
-        gap: 7rem;
-        max-width: 50%;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        max-width: 55%;
         margin: 1rem auto;
     }
 
-    /*review text takes up full width */
-    #bothReviews > p {
+    /*Makes second review section as tall as the first one*/
+    #bothReviews blockquote {
+        display: flex;
+    }
+
+    /*Makes both reviews take up full width of its grid cell*/
+    #bothReviews p {
         width: 100%;
     }
 }
