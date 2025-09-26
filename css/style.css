@@ -100,27 +100,32 @@ body {
 
 
 
-/*Acts as container for the overlay, centers text, and applies lighter text color*/
+/*Acts as container for the welcome section, centers text, sets section to take up about a third of viewport, adds bottom border, removes overflow from image, and applies lighter text color to message*/
 .welcomeSection {
     position: relative;
     text-align: center;
     color: var(--light-text-col);
+    min-height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+    overflow: hidden;
+    border-bottom: 3px solid var(--gldn-accent);
 }
 
-/*Image takes up about a third of the viewport*/
+/*Image takes up full width, covers the section, and is absolutely positioned*/
 .welcomeSection img {
     width:100%;
-    height: 30vh;
+    height: 100%;
     object-fit: cover;
+    position: absolute;
 }
 
-/*Centers the welcome message in the middle of the image and applies some styles, such as background*/
+/*Positions the welcome message in the middle of the image and applies some styles, such as background, padding, and border radius*/
 .centeredWelcome {
-    position: absolute;
-    top: 50%;
+    position: relative;
     width: 70%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     background-color: rgba(17, 24, 39, 0.85);
     padding: 1px 15px;
     border-radius: 3rem;
@@ -172,6 +177,7 @@ address span {
     text-align: center;
     height: 18vh;
     padding: 4rem;
+    
 }
 
 /*Styles the promotion box to be centered in the banner, applies background color, border, and padding*/
@@ -236,15 +242,23 @@ address span {
     background-color: #000000;
 }
 
-/*Styles the reviews section to have padding, margin, background color, border around reviews, and rounded edges*/
+/*Styles the reviews section to have padding, margin, background color, border around reviews, adds some font styles, centers the reviews, and gives rounded edges*/
 .reviewsSection p {
-    padding: 10px 50px;
-    margin-left: 5.5rem;
-    margin-right: 5.5rem;
     background-color: var(--bg-almost-white);
-    border: 3px solid var(--gldn-accent);
+    border: 5px solid var(--gldn-accent);
     border-radius: 5rem;
+    width: 70%;
+    margin: 0px auto;
+    border-radius: 1rem;
+    padding: 2rem;
+    margin-bottom: 5%;
+    line-height: 1.7rem;
+    text-align: center;
 }
+
+
+
+
 
 /*Applies a black background with some padding and center alignment on page.*/
 .blackBg {
@@ -572,14 +586,14 @@ details[open] p {
         margin-left: 0px;
     }
 
-    /*Removes the image in the welcome section*/
+    /*Places image under the message*/
     .welcomeSection img {
-        display: none;
+        z-index: 1;
     }
 
-    /*Adjusts the height of the welcome section to fit the text*/
-    .welcomeSection {
-        height: auto;
+    /*Places welcome message about the image background*/
+    .welcomeSection .centeredWelcome {
+        z-index: 2;
     }
     
     /*Removes and edits some previous styling so that the text fits the screen and applies a drop shadow*/
@@ -630,6 +644,13 @@ details[open] p {
     /*Adusts padding so more text fits across on smaller devices than before*/
     .centeredHeadings {
         padding: 5%;
+    }
+
+    /*Keeps both reviews, when on one column, centered with extra bottom margin and makes them take up 85% of width*/
+    .reviewsSection p {
+        max-width: 85%;
+        margin: 0px auto;
+        margin-bottom: 5%;
     }
 }
 
@@ -704,27 +725,33 @@ details[open] p {
     /*Puts the reviews into a 2 column grid and fixes spaces for better readability*/
     #bothReviews {
         display: grid;
-        grid-template-columns: auto auto;
-        gap: 7rem;
-        justify-content: center;
-        margin-bottom: 2.5rem;
-        margin-top: 1.5rem;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        margin-top: 1.25rem;
     }
 
-    /*Adjusts revew border styling, including text*/
-    #bothReviews p {
-        margin: 0px auto;
+    .reviewsSection p {
         max-width: 500px;
-        border-radius: 1rem;
-        padding: 3rem;
-        border: 5px solid var(--gldn-accent);
-        line-height: 1.7rem;
-        text-align: center;
     }
 
     /*Restricts width of welcome message section*/
     .centeredWelcome {
         max-width: 45%;
     }
+
+    /*Turns into 2 column grid for the reviews with spacing and width adjustments*/
+    #bothReviews {
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 7rem;
+        max-width: 50%;
+        margin: 1rem auto;
+    }
+
+    /*review text takes up full width */
+    #bothReviews > p {
+        width: 100%;
+    }
 }
+
 
