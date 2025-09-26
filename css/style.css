@@ -517,15 +517,31 @@ details[open] p {
 
 
 
+
+
 /*Adjusts the layout for medium screens*/
-@media screen and (max-width: 1023px) {
-    /*Header becomes single column with navigation and logo centered*/
+@media screen and (min-width: 751px) and (max-width: 1399px){
+    /*Header becomes single column with logo in the top left corner and navigation is centered, under the logo.*/
     header {
         display: grid;
         grid-template-columns: 1fr;
-        justify-items: center;
+    }
+    /*Logo in top left corner*/
+    .logoAndName {
+        justify-self: start;
     }
 }
+
+/*Adjusts the layout for medium/large screens*/
+@media screen and (min-width: 1100px) and (max-width: 1399px){
+    /*Logo is in the top left corner with navigation to the right of it*/
+    header {
+        display: grid;
+        grid-template-columns: 1fr auto;
+    }
+}
+    
+
 
 
 /*Adjusts the layout for smaller screens*/
