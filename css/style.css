@@ -517,7 +517,15 @@ details[open] p {
 
 
 
-
+/*Adjusts the layout for medium screens*/
+@media screen and (max-width: 1023px) {
+    /*Header becomes single column with navigation and logo centered*/
+    header {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+}
 
 
 /*Adjusts the layout for smaller screens*/
