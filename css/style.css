@@ -1,3 +1,4 @@
+
 /*Sets the basic styles acroos all pages, including colors and the font*/
 :root {
     --bg-color: #FCF9EC;
@@ -164,14 +165,13 @@ address span {
 
 
 
-/*Styles the banner with a gradient background, helps center the text on the gradient, sets height viewpoint, and applies padding with margin for better spacing*/
+/*Styles the banner with a gradient background, helps center the text on the gradient, sets height viewpoint, and applies padding for better spacing*/
 .gradientBanner {
     background: linear-gradient(to right, #DA8F2A, #f9c95b, #EDCDA3);
     position: relative;
     text-align: center;
     height: 18vh;
     padding: 4rem;
-    margin-bottom: 1.5rem;
 }
 
 /*Styles the promotion box to be centered in the banner, applies background color, border, and padding*/
@@ -350,20 +350,21 @@ details a {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 10px 50px;
-    max-width: 1500px;
+    max-width: 90%;
 }
 
 /*Limits the width of the message box*/
 textarea {
-    max-width: 1500px;
+    max-width: 90%;
 }
 
-/*Puts labels on top of the form spaces and makes the text bold*/
+/*Puts labels on top of the form spaces, increases font, and makes the text bold*/
 label {
     display: block;
     margin-bottom: 5px;
-    margin-top: 12px;
+    margin-top: 1.5rem;
     font-weight: bold;
+    font-size: 1.125rem;
 }
 
 /*Changes the font family, padding, and border to use the golden accent color for the textaarea, inputs, and drop down select*/
@@ -372,9 +373,7 @@ textarea, input, select {
     border: 2px solid var(--gldn-accent);
     font-family: var(--fnt-fam);
     font-size: 1.125rem;
-    padding-bottom: 7px;
-    padding-top: 7px;
-    padding-left: 3px;
+    padding: 0.5rem;
 }
 
 /*Styles the send message button in terms of size, color, and margin to match color scheme and layout*/
@@ -408,9 +407,8 @@ input[type="submit"]:hover {
 /*Establishes a two colum grid. Image of owner is on the left, and information about her is on the right. There is some margin spacing to help with layot*/
 #ownerSection {
     display: grid;
-    grid-template-columns: 45% 1fr;
-    margin: 30px 15px;
-    margin-right: 10%;
+    grid-template-columns: 1fr 1fr;
+    margin: 5% 3%;
     justify-items: center;
 }
 
@@ -420,6 +418,7 @@ input[type="submit"]:hover {
     border: 15px dashed var(--gldn-accent);
     box-shadow:
     0 0 0 5px var(--dark-text-col);
+    background-color: var(--bg-almost-white);
 }
 
 /*Centers and increases size of the text that is above the owner's image*/
@@ -429,7 +428,7 @@ input[type="submit"]:hover {
 }
 
 /*Lowers the first p tag in "Meet the Owner" section*/
-#ownerSection div p:first-child {
+#ownerSection div p {
     margin-top: 80px;
 }
 
@@ -438,21 +437,23 @@ input[type="submit"]:hover {
 
 
 
-/*Four column grid for centered gallery photos*/
+/*Four column grid for centered gallery photos with gap and margin adjustments for spacing*/
 .cleaningGallery {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 20px;
+    gap: 2rem;
     justify-items: center;
-    margin-bottom: 25px;
+    margin-bottom: 2rem;
 }
 
-/*Image size adjustments and border styles*/
+/*Image size adjustments for aspect ratio and new border styles. Set's max width so that images are not wider than the device screen*/
 .cleaningGallery img {
-    width: 180px;
-    height: 250px;
+    max-width: 100%;
+    width: 100%;
+    aspect-ratio: 180 / 250;
     border: 2px solid var(--gldn-accent);
 }
+
 
 
 
@@ -523,7 +524,8 @@ details[open] p {
 @media screen and (max-width: 750px) {
     /*Header becomes single column with navigation under logo*/
     header {
-        grid-template-columns: auto;
+        display: grid;
+        grid-template-columns: 1fr;
         justify-items: center;
     }
 
@@ -573,7 +575,6 @@ details[open] p {
     }
 
     /*When the screensize is smaller, there is only 1 form colum and added margins*/
-    
      .contactGrid {
         grid-template-columns: auto;
         margin: 1rem;
@@ -581,7 +582,6 @@ details[open] p {
     
     
     /*Smaller screen sizes get one column instead of two. Top features owner's image and below is information about her*/
-    
     #ownerSection {
         grid-template-columns: 1fr;
         padding: 10px;
@@ -589,8 +589,116 @@ details[open] p {
     
 
     /*Smaller screen sizes get two columns instead of four for displaying cleaning images*/
-    
     .cleaningGallery {
         grid-template-columns: 1fr 1fr;
-    } 
+    }
+
+    /*Smaller screens have the promtion take up 75% of width*/
+    .promotion {
+        width: 70%;
+    }
+
+    /*Adjusted veiwport height to be a bit more on smaller screens*/
+    .gradientBanner {
+        height: 20vh;
+    }
+
+    /*Adusts padding so more text fits across on smaller devices than before*/
+    .centeredHeadings {
+        padding: 5%;
+    }
+}
+
+
+
+
+
+/*Adjusts the layout for larger screen sizes*/
+@media screen and (min-width: 1400px) {
+    /*Makes images a little smaller*/
+    .cleaningGallery img {
+        width: 70%;
+    }
+
+    /*Gives more padding for the heading above the pictures*/
+    #communityHelp {
+        padding: 1.5rem 1rem;
+    }
+
+    /*Makes owner picture larger*/
+    #ownerSection img {
+        width: 95%;
+    }
+
+    /*Adjusts text styles for larger screen sizes in meet the owner section. Puts text into 3 columns with spacing*/
+    #ownerSection > div:last-child {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 5rem;
+        line-height: 1.7rem;
+        font-weight: bold;
+    }
+
+    /*Puts the 4 p tags into 4 columns for the our story section and fixes padding*/
+    #ourStory {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 7rem;
+        line-height: 1.7rem;
+        padding-left: 3.5rem;
+        padding-right: 3.5rem;
+    }
+
+    /*Adds a black vertical line between the 4 colums in the our story section with padding*/
+    #ourStory p:nth-child(-n+3) {
+        border-right: 2px solid var(--bg-footer);
+        padding-right: 3.5rem;
+    }
+
+    /*Limits width of content and centers it*/
+    .leftRightPadding {
+        max-width: 70%;
+        margin: 0px auto;
+    }
+
+    /*Centers cleaning preparation section and gives it border styling as well as spacing adjustments*/
+    #cleaningPrep {
+        max-width: 630px;
+        margin: 0px auto;
+        padding: 1.5rem;
+        border: 7px solid var(--bg-footer);
+        border-radius: 3rem;
+        background-color: var(--light-text-col);
+    }
+
+    /*Make the promotion section tighter for more emphasis on it*/
+    .promotion {
+        max-width: 30%;
+    }
+
+    /*Puts the reviews into a 2 column grid and fixes spaces for better readability*/
+    #bothReviews {
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 7rem;
+        justify-content: center;
+        margin-bottom: 2.5rem;
+        margin-top: 1.5rem;
+    }
+
+    /*Adjusts revew border styling, including text*/
+    #bothReviews p {
+        margin: 0px auto;
+        max-width: 500px;
+        border-radius: 1rem;
+        padding: 3rem;
+        border: 5px solid var(--gldn-accent);
+        line-height: 1.7rem;
+        text-align: center;
+    }
+
+    /*Restricts width of welcome message section*/
+    .centeredWelcome {
+        max-width: 45%;
+    }
 }
