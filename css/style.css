@@ -344,7 +344,7 @@ details a {
     border-radius: 15px;
 }
 
-/*Bolds, underlines, and adds padding to the term "Deep Cleaning Package"*/
+/*Bolds, makes text lighter, then adds background color and padding to the term "Deep Cleaning Package"*/
 .deepCleanPack {
     font-weight: bold;
     padding: 3px;
