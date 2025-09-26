@@ -615,9 +615,10 @@ details[open] p {
 
 /*Adjusts the layout for larger screen sizes*/
 @media screen and (min-width: 1400px) {
-    /*Makes images a little smaller*/
+    /*Makes images a little smaller and adds bottom margin*/
     .cleaningGallery img {
         width: 70%;
+        margin-bottom: 2rem;
     }
 
     /*Gives more padding for the heading above the pictures*/
@@ -702,3 +703,4 @@ details[open] p {
         max-width: 45%;
     }
 }
+
