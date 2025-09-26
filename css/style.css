@@ -591,9 +591,10 @@ details[open] p {
         z-index: 1;
     }
 
-    /*Places welcome message about the image background*/
+    /*Places welcome message above the image background and sets margin to 0 to fit more text*/
     .welcomeSection .centeredWelcome {
         z-index: 2;
+        margin: 0px;
     }
     
     /*Removes and edits some previous styling so that the text fits the screen and applies a drop shadow*/
