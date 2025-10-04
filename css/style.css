@@ -191,7 +191,7 @@ address span {
 
 /*Bolds p text in the promotion section and decreases the margin to 0.5 rem*/
 .promotion p {
-    font-weight: bold;
+    font-weight: 600;
     margin: 0.5rem;
 }
 
