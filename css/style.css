@@ -200,16 +200,13 @@ address span {
     margin: 0px;
 }
 
-/*Styles the percent off text to be larger, red, and have a golden text shadow for more attention*/
+/*Styles the percent off text to be larger, red, and have a dark red text shadow for more attention*/
 #percentOff {
     color: red;
     font-size: 3.2rem;
     margin: 0px;
     text-shadow: 
-        1px 1px 5px var(--gldn-accent),
-        -1px 1px 5px var(--gldn-accent),
-        -1px -1px 5px var(--gldn-accent),
-        1px -1px 5px var(--gldn-accent);
+        1px 1px 1px rgb(91, 0, 0)
 }
 
 /*Styles header sections to be centered, have padding, and remove margins*/
