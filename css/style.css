@@ -68,15 +68,9 @@ h1 {
     padding: 1rem 1.5rem;
 }
 
-/*Applies a black outline to the navigation linked when hovered over*/
+/*Bolds the navigation links when they're hovered over*/
 header nav a:hover {
-    color: var(--gldn-accent);
     font-weight: bold;
-    text-shadow: 
-        1px 1px 1px var(--dark-text-col),
-        -1px 1px 1px var(--dark-text-col),
-        -1px -1px 1px var(--dark-text-col),
-        1px -1px 1px var(--dark-text-col);
 }
 
 
@@ -206,15 +200,10 @@ address span {
     margin: 0px;
 }
 
-.noWrapping {
-    white-space: nowrap;
-}
-
 /*Styles the percent off text to be larger, red, and have a golden text shadow for more attention*/
 #percentOff {
     color: red;
     font-size: 3.2rem;
-    font-weight: bold;
     margin: 0px;
     text-shadow: 
         1px 1px 5px var(--gldn-accent),
@@ -240,7 +229,6 @@ address span {
 .reviewsSection p {
     background-color: var(--bg-almost-white);
     border: 5px solid var(--gldn-accent);
-    border-radius: 5rem;
     width: 70%;
     margin: 0px auto;
     border-radius: 1rem;
@@ -298,14 +286,12 @@ address span {
     font-weight: bold;
 }
 
-/*Applies golden accent to text; specifically, to the navigation links and uses shadows to give an outline while also increases the font-size for better readability*/
+/*Applies golden accent to text; specifically, to the navigation links and by adding background and increasing the font-size for better readability*/
 .navLinks .goldAcntTxt {
+    background-color: var(--bg-footer);
+    border-radius: 3rem;
+    padding: 0.7rem 1.5rem;
     color: var(--gldn-accent);
-    text-shadow: 
-        2px 2px 1px var(--dark-text-col),
-        -1px 1px 1px var(--dark-text-col),
-        -1px -1px 1px var(--dark-text-col),
-        1px -1px 1px var(--dark-text-col);
     letter-spacing: 1px;
     font-size: 1.8rem;
 }
@@ -445,9 +431,20 @@ input[type="submit"]:hover {
     font-size: 1.875rem;
 }
 
+/*Adds more line height for the 3 owner section p tags for readability*/
+#ownerSection p {
+    line-height: 1.4rem;
+}
+
 /*Lowers the first p tag in "Meet the Owner" section*/
-#ownerSection div p {
+#ownerSection div p:first-child {
     margin-top: 80px;
+}
+
+/*Gives the Our Story section additional padding and more line-height distance for readability*/
+#ourStory p {
+    padding-bottom: 1.3rem;
+    line-height: 1.7rem;
 }
 
 
@@ -548,6 +545,12 @@ details[open] p {
     .logoAndName {
         justify-self: start;
     }
+
+    /*Adds more spacing between 2nd p tag for the owner section and the other two*/
+    #ownerSection div p:nth-child(2) {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
 }
 
 /*Adjusts the layout for medium/large screens*/
@@ -576,6 +579,12 @@ details[open] p {
         flex-direction: column;
         align-items: center;
         gap: 15px;
+    }
+
+    /*Adds more spacing between 2nd p tag for the owner section and the other two*/
+    #ownerSection div p:nth-child(2) {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
     }
 
     /*Stacks WRS and the Follow Us links*/
@@ -667,8 +676,13 @@ details[open] p {
 @media screen and (min-width: 1400px) {
     /*Makes images a little smaller and adds bottom margin*/
     .cleaningGallery img {
-        width: 70%;
+        max-width: 100%;
         margin-bottom: 2rem;
+    }
+
+    /*Makes gallery 5 columns*/
+    .cleaningGallery {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     }
 
     /*Gives more padding for the heading above the pictures*/
@@ -676,26 +690,38 @@ details[open] p {
         padding: 1.5rem 1rem;
     }
 
-    /*Makes owner picture larger*/
+    /*Makes owner picture larger and take up full width*/
     #ownerSection img {
-        width: 95%;
+        width: 100%;
     }
 
-    /*Adjusts text styles for larger screen sizes in meet the owner section. Puts text into 3 columns with spacing*/
-    #ownerSection > div:last-child {
+    /*Sets a 4 column grid and adds a larger gap between the owner's image and the three paragraphs*/
+    #ownerSection {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
         gap: 5rem;
+    }
+
+    /*Takes the div with the 3 p tags and places 1 p tag into the 2nd, 3rd, and 4th column*/
+    #ownerSection > div:last-child {
+        display: contents;
+    }
+
+    /*Gives more vertical spacing between paragraph tags to increase readability*/
+    #ownerSection p {
         line-height: 1.7rem;
-        font-weight: bold;
+    }
+
+    /*Lowers the three p tags in "Meet the Owner" section*/
+    #ownerSection div p {
+        margin-top: 80px;
     }
 
     /*Puts the 4 p tags into 4 columns for the our story section and fixes padding*/
     #ourStory {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
-        gap: 7rem;
-        line-height: 1.7rem;
+        gap: 5rem;
         padding-left: 3.5rem;
         padding-right: 3.5rem;
     }
