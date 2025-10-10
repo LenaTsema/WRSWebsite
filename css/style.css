@@ -302,9 +302,8 @@ address span {
 
 
 
-/*Styles the details element so that cursor becomes a pointer when hovered over, also styles the border, margin, and padding to improve readability*/
+/*Styles the border, margin, and padding to improve readability*/
 details {
-    cursor: pointer;
     border-radius: 15px;
     margin-left: 20px;
     margin: 20px 20px;
@@ -316,6 +315,11 @@ details {
 /*Increases line height for packages and services text*/
 details p {
     line-height: 1.6rem;
+}
+
+/*Styles the summary so that cursor becomes a pointer when hovered over*/
+summary:hover {
+    cursor: pointer;
 }
 
 /*Makes the summary text bigger and bolder*/
