@@ -111,7 +111,7 @@ document.addEventListener("DOMContentLoaded", function() {
         //If any field is not valid, message is not sent and user is asked to make corrections.
         if (!validForm) {
         event.preventDefault();
-        alert("Please correct the red fields before submitting.")
+        alert("Please correct all invalid or red fields before submitting.")
         }
         else {
             //If all fields are valid, sends the message and alerts them that it went through.
